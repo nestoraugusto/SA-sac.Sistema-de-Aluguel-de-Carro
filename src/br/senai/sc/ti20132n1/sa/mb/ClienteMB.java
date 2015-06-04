@@ -2,11 +2,12 @@ package br.senai.sc.ti20132n1.sa.mb;
 
 import java.util.List;
 
+import javax.faces.bean.ManagedBean;
 import javax.annotation.PostConstruct;
 
 import br.senai.sc.ti20132n1.sa.Dao.ClienteDao;
 import br.senai.sc.ti20132n1.sa.model.Cliente;
-
+@ManagedBean
 public class ClienteMB {
 	
 	private Cliente cliente;
