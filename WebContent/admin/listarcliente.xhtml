@@ -7,14 +7,11 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 <ui:composition template="/WEB-INF/templates/padrao.xhtml">
-	<ui:define name="title">
-	    Carros
-	</ui:define>
 	<ui:define name="header">
-		
+	    
 	</ui:define>
 	<ui:define name="content">
-			<div class="col-md-3">
+	    <div class="col-md-3">
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation" class="dropdown"><a
 						class="dropdown-toggle" data-toggle="dropdown" href="#"
@@ -27,9 +24,9 @@
 								href="#">Busca</a></li>
 							<li role="presentation"><a role="menuitem" tabindex="-1"
 								href="listarcarros.xhtml">Listar</a></li>
-						</ul>
-						</li>
-						<ul class="nav nav-pills nav-stacked">
+						</ul></li>
+				</ul>
+				<ul class="nav nav-pills nav-stacked">
 				<li role="presentation" class="dropdown"><a
 					class="dropdown-toggle" data-toggle="dropdown" href="#"
 					role="button" aria-expanded="false"> Cliente <span
@@ -45,38 +42,37 @@
 					</ul>
 					</li>
 			</ul>
-				</ul>
 			</div>
 			<div class="col-md-9">
 				<h:form>
-					<h:dataTable styleClass="table" value="#{carroMB.carros}"
+					<h:dataTable styleClass="table" value="#{clienteMB.clientes}"
 						var="item">
 						<h:column>
 							<f:facet name="header">ID</f:facet>
 							<h:outputText value="#{item.id}" />
 						</h:column>
 						<h:column>
-							<f:facet name="header">Marca</f:facet>
-							<h:outputText value="#{item.marca}" />
+							<f:facet name="header">Nome</f:facet>
+							<h:outputText value="#{item.nome}" />
 						</h:column>
 						<h:column>
-							<f:facet name="header">Modelo</f:facet>
-							<h:outputText value="#{item.model}" />
+							<f:facet name="header">CPF</f:facet>
+							<h:outputText value="#{item.cpf}" />
 						</h:column>
 						<h:column>
-							<f:facet name="header">Ano</f:facet>
-							<h:outputText value="#{item.ano}" />
+							<f:facet name="header">Usuário</f:facet>
+							<h:outputText value="#{item.nomeusuario}" />
 						</h:column>
 
 						<h:column>
 							<h:commandLink styleClass="btn btn-info"
-								action="#{carroMB.editar(item.id)}">
+								action="#{clienteMB.editar(item.id)}">
 								<span class="glyphicon glyphicon-edit"></span>
 							</h:commandLink>
 							<h:outputText value="&nbsp;&nbsp;&nbsp;" />
 							<h:commandLink styleClass="btn btn-warning"
 								onclick="return confirm('Tem certeza?');"
-								action="#{carroMB.excluir(item.id)}">
+								action="#{clienteMB.excluir(item.id)}">
 								<span class="glyphicon glyphicon-trash"></span>
 							</h:commandLink>
 						</h:column>
@@ -85,7 +81,7 @@
 			</div>
 	</ui:define>
 	<ui:define name="footer">
-
+	  
 	</ui:define>
 </ui:composition>
 </html>

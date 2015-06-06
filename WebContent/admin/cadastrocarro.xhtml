@@ -27,8 +27,24 @@
 						<li role="presentation"><a role="menuitem" tabindex="-1"
 							href="#">Busca</a></li>
 						<li role="presentation"><a role="menuitem" tabindex="-1"
-							href="listarcarros.xhtml">Listar Carros</a></li>		
+							href="listarcarros.xhtml">Listar</a></li>		
 					</ul></li>
+					<ul class="nav nav-pills nav-stacked">
+				<li role="presentation" class="dropdown"><a
+					class="dropdown-toggle" data-toggle="dropdown" href="#"
+					role="button" aria-expanded="false"> Cliente <span
+						class="caret"></span>
+				</a>
+					<ul class="dropdown-menu" role="menu">
+						<li role="presentation"><a role="menuitem" tabindex="-1"
+							href="cadastrocliente.xhtml">Cadastra</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1"
+							href="#">Busca</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1"
+							href="listarcliente.xhtml">Listar</a></li>
+					</ul>
+					</li>
+			</ul>
 			</ul>
 		</div>
 		<div class="col-md-9">
@@ -37,14 +53,12 @@
 				<h:form>
 
 					<div class="col-md-6">
-						<div class="input-group">
 							<h:panelGroup rendered="#{not empty carroMB.carro.id}">
 								<span class="input-group-addon" id="sizing-addon2">ID</span>
-								<h:inputText styleClass="form-control"
-									value="#{carroMB.carro.id}" readonly="true" />
+								<h:inputText styleClass="form-control"	value="#{carroMB.carro.id}" 
+								readonly="true" />
 							</h:panelGroup>
 							<h:inputHidden value="#{carroMB.carro.id}" />
-						</div>
 						<br />
 						<div class="input-group">
 							<span class="input-group-addon" id="sizing-addon2">Marca</span>

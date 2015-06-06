@@ -36,11 +36,11 @@
 				</a>
 					<ul class="dropdown-menu" role="menu">
 						<li role="presentation"><a role="menuitem" tabindex="-1"
-							href="cadastrocarro.xhtml">Cadastra</a></li>
+							href="cadastrocliente.xhtml">Cadastra</a></li>
 						<li role="presentation"><a role="menuitem" tabindex="-1"
 							href="#">Busca</a></li>
 						<li role="presentation"><a role="menuitem" tabindex="-1"
-							href="listarcarros.xhtml">Listar</a></li>
+							href="listarcliente.xhtml">Listar</a></li>
 					</ul></li>
 			</ul>
 		</div>
@@ -49,16 +49,12 @@
 			<h:form>
 
 				<div class="col-md-6">
-					<div class="input-group">
 						<h:panelGroup rendered="#{not empty clienteMB.cliente.id}">
 							<span class="input-group-addon" id="sizing-addon2">ID</span>
-							<h:inputText styleClass="form-control"
-								value="#{clienteMB.cliente.id}" readonly="true" />
+							<h:inputText styleClass="form-control" value="#{clienteMB.cliente.id}" 
+							readonly="true" />
 						</h:panelGroup>
-						<h:inputHidden value="#{clienteMB.cliente.id}" />
-					</div>
-
-				
+						<h:inputHidden value="#{clienteMB.cliente.id}" />				
 				<br />
 				<div class="input-group">
 					<h:panelGroup>
