@@ -1,0 +1,193 @@
+/*Rodapé menu carros */
+
+.footer-cars {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    float: left;
+    height: 225px;
+    position: relative;
+    width: 1080px;
+    z-index: 100;
+}
+
+.footer-cars .li {
+    display: inline;
+    list-style: none;
+    float:left;
+}
+.wrapper {
+    width: 1080px;
+    float: none;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    clear: both;
+}
+
+.footer-cars li a {
+    /* background-repeat: no-repeat; */
+    /* background-position: 0 0; */
+    /* display: block; */
+}
+
+footer #dock .carros a .title {
+    background: url("../img/footer-dock-label.png") no-repeat;
+    color: #fff;
+    display: none;
+    font-size: 13px;
+    height: 35px;
+    line-height: 0.9em;
+    padding: 0 4px;
+    position: absolute;
+    text-align: center; text-decoration: none;
+    top: -25px;
+    width: 90px;
+    left: 81px;
+    font-family: arial, regular, sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+footer #dock .carros a:hover .title {
+    display: block;
+}
+
+.footer-cars .jac-j2 {
+    position:absolute;
+    background: transparent url('#{resource["img/carro1.png"]}');
+    height: 143px;
+    left: -30px;    
+    width: 211px;
+    top: 12px;
+}
+.footer-cars .jac-j2.off {
+    background-position:0px -223px;
+}
+
+.footer-cars .jac-j3 {
+    position:absolute;
+    background: transparent url('#{resource["img/car-j3.png"]}');
+
+    height: 128px;
+
+    left: 98px;
+
+    top: 49px;
+
+    width: 230px;
+}
+.footer-cars .jac-j3.off {
+    background-position: 0px -142px;
+}
+.footer-cars .jac-j3 .title {
+    left: 40px;
+    top:-39px !important;
+}
+.footer-cars .jac-j3t {
+    position:absolute;
+    background: transparent url('#{resource["img/car-j3t.png"]}');
+
+    height: 124px;
+
+    left: 250px;
+
+    top: 52px;
+
+    width: 243px;
+}
+.footer-cars .jac-j3t.off {
+    background-position: 0px -146px;
+}
+.footer-cars .jac-j3t .title {
+    left: 40px;
+    top:-30px !important;
+}
+
+.footer-cars .jac-t6 {
+    position:absolute;
+    background: transparent url('#{resource["img/car-t6.png"]}');
+    height: 166px;
+    left: 476px;
+    top: 50px;
+    width: 284px;
+    height: 183px;
+    z-index: 102;
+}
+.footer-cars .jac-t6.off {
+    background-position:4px -177px;
+}
+.footer-cars .jac-t6 .title {
+    left: 40px;
+    top:-30px !important;
+}
+
+.footer-cars .jac-j5 {
+    position:absolute;
+    background: transparent url('#{resource["img/car-t6.png"]}');
+    height: 157px;
+    left: 681px;
+    top: 45px;
+    width: 277px;
+    z-index: 101;
+
+}
+.footer-cars .jac-j5.off {
+    background-position: -2px -147px;
+    z-index:101;
+}
+.footer-cars .jac-j5 .title {
+    left: 50px;
+    top:-40px !important;
+}
+
+.footer-cars .car-j6 {
+    background: transparent url("../img/car-j6.png");
+    height: 141px;
+    top: 16px;
+    width: 259px;
+    float: left;
+    position: absolute;
+    left: 799px;
+    z-index: 100;
+}
+.footer-cars .car-j6.off {
+    background-position: 0px -148px;
+}
+.footer-cars .car-j6 .title {
+    left: 35px;
+    top:-30px !important;
+}
+footer {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    margin: 0 auto;
+    min-width: 1000px;
+}
+
+footer .menu {
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+footer #dock {
+    position: relative;
+}
+footer #dock .spacer {
+    position: absolute;
+    z-index: 101;
+    left: 0;
+    top: 0
+}
+footer #dock .carro {
+    font-size: 0;
+    position: absolute;
+}
+
+#pid-node-254 #footer{
+	display: none;
+}
