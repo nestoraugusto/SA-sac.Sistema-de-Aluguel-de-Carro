@@ -17,7 +17,7 @@
 			<property name="hibernate.format_sql" value="true" />
 		</properties>
 	</persistence-unit>
-<<<<<<< HEAD
+
 
 	<persistence-unit name="CadastroPessoasTest"
 		transaction-type="RESOURCE_LOCAL">
@@ -36,6 +36,4 @@
 			<property name="hibernate.format_sql" value="true" />
 		</properties>
 	</persistence-unit>
-=======
->>>>>>> branch 'master' of https://github.com/nestoraugusto/SA-sac.Sistema-de-Aluguel-de-Carro.git
 </persistence>
