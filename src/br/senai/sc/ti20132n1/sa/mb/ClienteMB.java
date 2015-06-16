@@ -52,8 +52,8 @@ public class ClienteMB {
 	
 	public String editar(String idParam){
 		Long id = Long.valueOf(idParam);
-		clienteDao.buscarPorId(id);
-		return "formcliente";
+		cliente = clienteDao.buscarPorId(id);
+		return "cadastrocliente";
 	}
 	
 	
