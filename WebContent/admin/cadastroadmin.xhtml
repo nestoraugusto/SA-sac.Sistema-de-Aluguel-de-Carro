@@ -12,8 +12,9 @@
 	</ui:define>
 	<ui:define name="content">
 		<h:form>
-			<h:outputLabel value="Nome " />
-			<h:inputText styleClass="form-control"
+			<h:outputLabel value="Data de Nascimento" />
+			<h:inputText styleClass="form-control" id="idNascimento"
+				converterMessage="Data inválida"
 				value="#{administradorMB.administrador.dataNascimento}">
 				<f:convertDateTime locale="pt_BR" />
 			</h:inputText>

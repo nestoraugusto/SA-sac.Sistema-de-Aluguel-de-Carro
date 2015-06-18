@@ -1,0 +1,47 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:form>
+
+
+		<h:menubar>
+			<h:submenu label="File" icon="ui-icon-document">
+				<h:submenu label="New" icon="ui-icon-contact">
+					<h:menuitem value="Project" url="#" />
+					<h:menuitem value="Other" url="#" />
+				</h:submenu>
+				<h:menuitem value="Open" url="#" />
+				<h:separator />
+				<h:menuitem value="Quit" url="#" />
+			</h:submenu>
+
+			<h:submenu label="Edit" icon="ui-icon-pencil">
+				<h:menuitem value="Undo" url="#" icon="ui-icon-arrowreturnthick-1-w" />
+				<h:menuitem value="Redo" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+			</h:submenu>
+
+			<h:submenu label="Help" icon="ui-icon-help">
+				<h:menuitem value="Contents" url="#" />
+				<h:submenu label="Search" icon="ui-icon-search">
+					<h:submenu label="Text">
+						<h:menuitem value="Workspace" url="#" />
+					</h:submenu>
+					<h:menuitem value="File" url="#" />
+				</h:submenu>
+			</h:submenu>
+
+		
+
+			<h:menuitem value="Quit" url="http://www.primefaces.org"
+				icon="ui-icon-close" />
+
+			<h:facet name="options">
+				<h:inputText style="margin-right:10px" placeholder="Search" />
+				<h:commandButton type="button" value="Logout" icon="ui-icon-extlink" />
+			</h:facet>
+		</h:menubar>
+	</h:form>
+
+
+</ui:composition>
