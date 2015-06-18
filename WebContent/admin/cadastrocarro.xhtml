@@ -15,6 +15,8 @@
 
 	</ui:define>
 	<ui:define name="content">
+
+		<h:messages globalOnly="true" />
 		<div class="col-md-3">
 			<ul class="nav nav-pills nav-stacked">
 				<li role="presentation" class="dropdown"><a
@@ -27,102 +29,104 @@
 						<li role="presentation"><a role="menuitem" tabindex="-1"
 							href="#">Busca</a></li>
 						<li role="presentation"><a role="menuitem" tabindex="-1"
-							href="listarcarros.xhtml">Listar</a></li>		
+							href="listarcarros.xhtml">Listar</a></li>
 					</ul></li>
-					<ul class="nav nav-pills nav-stacked">
-				<li role="presentation" class="dropdown"><a
-					class="dropdown-toggle" data-toggle="dropdown" href="#"
-					role="button" aria-expanded="false"> Cliente <span
-						class="caret"></span>
-				</a>
-					<ul class="dropdown-menu" role="menu">
-						<li role="presentation"><a role="menuitem" tabindex="-1"
-							href="cadastrocliente.xhtml">Cadastra</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1"
-							href="#">Busca</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1"
-							href="listarcliente.xhtml">Listar</a></li>
-					</ul>
-					</li>
-			</ul>
+				<ul class="nav nav-pills nav-stacked">
+					<li role="presentation" class="dropdown"><a
+						class="dropdown-toggle" data-toggle="dropdown" href="#"
+						role="button" aria-expanded="false"> Cliente <span
+							class="caret"></span>
+					</a>
+						<ul class="dropdown-menu" role="menu">
+							<li role="presentation"><a role="menuitem" tabindex="-1"
+								href="cadastrocliente.xhtml">Cadastra</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1"
+								href="#">Busca</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1"
+								href="listarcliente.xhtml">Listar</a></li>
+						</ul></li>
+				</ul>
 			</ul>
 		</div>
 		<div class="col-md-9">
 			<div>
 
-				<h:form>
-
+				<h:form enctype="multipart/form-data">
 					<div class="col-md-6">
-							<h:panelGroup rendered="#{not empty carroMB.carro.id}">
-								<span class="input-group-addon" id="sizing-addon2">ID</span>
-								<h:inputText styleClass="form-control"	value="#{carroMB.carro.id}" 
-								readonly="true" />
-							</h:panelGroup>
-							<h:inputHidden value="#{carroMB.carro.id}" />
+					<fieldset>
+						<h:panelGroup rendered="#{not empty carroMB.carro.id}">
+							<span class="input-group-addon" id="sizing-addon2">ID</span>
+							<h:inputText styleClass="form-control"
+								value="#{carroMB.carro.id}" readonly="true" />
+						</h:panelGroup>
+						<h:inputHidden value="#{carroMB.carro.id}" />
 						<br />
-						<div class="input-group">
-							<span class="input-group-addon" id="sizing-addon2">Marca</span>
+						<div class="input-group" style="width: 382px;">
+							<h:outputLabel value="Marca " />
 							<h:inputText styleClass="form-control"
 								value="#{carroMB.carro.marca}" />
 						</div>
 						<br />
-						<div class="input-group">
-							<span class="input-group-addon" id="sizing-addon2">Modelo</span>
+						<div class="input-group" style="width: 382px;">
+							<h:outputLabel value="Modelo " />
 							<h:inputText styleClass="form-control"
 								value="#{carroMB.carro.model}" />
 						</div>
 						<br />
-						<div class="input-group">
-							<span class="input-group-addon" id="sizing-addon2">Ano</span>
+						<div class="input-group" style="width: 382px;">
+							<h:outputLabel value="Ano " />
 							<h:inputText styleClass="form-control"
 								value="#{carroMB.carro.ano}" />
 						</div>
 						<br />
-						<div class="input-group">
-							<span class="input-group-addon" id="sizing-addon2">Valor</span>
+						<div class="input-group" style="width: 382px;">
+							<h:outputLabel value="Valor " />
 							<h:inputText styleClass="form-control"
 								value="#{carroMB.carro.valorcarro}" />
 						</div>
 						<br />
-						<div class="input-group">
-							<span class="input-group-addon" id="sizing-addon2">Imagen</span>
-							<h:inputText styleClass="form-control"
-								value="#{carroMB.carro.imagen}" />
-						</div>
-					</div>
 
+						<h:outputLabel value="Imagem " />
+						<h:inputFile styleClass="form-control" value="#{carroMB.imagem}" />
+						<h:inputHidden styleclass="form-control"
+							value="#{carroMB.carro.imagem}" />
+							</fieldset>
+					</div>
+						
 					<div class="col-md-6">
-						<div class="input-group">
-							<span class="input-group-addon" id="sizing-addon2">Quantidade
-								de Passageiros</span>
+					<fieldset>
+					<br></br>
+						<div class="input-group" style="width: 382px;">
+							<h:outputLabel value="Quantidade de passageiros " />
 							<h:inputText styleClass="form-control"
 								value="#{carroMB.carro.quantpassageiros}" />
 						</div>
 						<br />
-						<div class="input-group">
-							<span class="input-group-addon" id="sizing-addon2">Motor</span>
+						<div class="input-group" style="width: 382px;">
+							<h:outputLabel value="Motor " />
 							<h:inputText styleClass="form-control"
 								value="#{carroMB.carro.motor}" />
 						</div>
 						<br />
-						<div class="input-group">
-							<span class="input-group-addon" id="sizing-addon2">Portas</span>
+						<div class="input-group" style="width: 382px;">
+							<h:outputLabel value="Numero de Portas " />
 							<h:inputText styleClass="form-control"
 								value="#{carroMB.carro.quantportas}" />
 						</div>
 						<br />
-						<div class="input-group">
-							<span class="input-group-addon" id="sizing-addon2">Direção</span>
+						<div class="input-group" style="width: 382px;">
+							<h:outputLabel value="Direção " />
 							<h:inputText styleClass="form-control"
 								value="#{carroMB.carro.direcao}" />
 						</div>
 						<br />
 
-						<div class="input-group">
-							<span class="input-group-addon" id="sizing-addon2">Placa</span>
+						<div class="input-group" style="width: 382px;">
+							<h:outputLabel value="Placa " />
 							<h:inputText styleClass="form-control"
 								value="#{carroMB.carro.placa}" />
 						</div>
+						</fieldset>
 					</div>
 
 					<div class="col-md-12">
@@ -134,7 +138,6 @@
 							<button type="button" class="btn btn-default">Limpar</button>
 						</div>
 					</div>
-
 				</h:form>
 
 

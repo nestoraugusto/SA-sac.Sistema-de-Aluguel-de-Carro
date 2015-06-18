@@ -1,6 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 #cssmenu,
-#cssmenu ul,
 #cssmenu ul li,
 #cssmenu ul li a,
 #cssmenu #menu-button {
@@ -93,19 +92,7 @@
 #cssmenu > ul > li.has-sub:hover > a {
   border-top-color: #ffffff;
 }
-#cssmenu ul ul {
-  position: absolute;
-  left: -9999px;
-  top: 60px;
-  padding-top: 6px;
-  font-size: 13px;
-  opacity: 0;
-  -webkit-transition: top 0.2s ease, opacity 0.2s ease-in;
-  -moz-transition: top 0.2s ease, opacity 0.2s ease-in;
-  -ms-transition: top 0.2s ease, opacity 0.2s ease-in;
-  -o-transition: top 0.2s ease, opacity 0.2s ease-in;
-  transition: top 0.2s ease, opacity 0.2s ease-in;
-}
+
 #cssmenu.align-right ul ul {
   text-align: right;
 }

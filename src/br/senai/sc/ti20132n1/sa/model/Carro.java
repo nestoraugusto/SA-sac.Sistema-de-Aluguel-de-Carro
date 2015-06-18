@@ -18,7 +18,7 @@ public class Carro {
 	private String motor;
 	private int quantportas;
 	private String direcao;
-	private String imagen;
+	private String imagem;
 	private String placa;
 	
 	
@@ -77,11 +77,11 @@ public class Carro {
 	public void setDirecao(String direcao) {
 		this.direcao = direcao;
 	}
-	public String getImagen() {
-		return imagen;
+	public String getImagem() {
+		return imagem;
 	}
-	public void setImagen(String imagen) {
-		this.imagen = imagen;
+	public void setImagem(String imagen) {
+		this.imagem = imagen;
 	}
 	public String getPlaca() {
 		return placa;
