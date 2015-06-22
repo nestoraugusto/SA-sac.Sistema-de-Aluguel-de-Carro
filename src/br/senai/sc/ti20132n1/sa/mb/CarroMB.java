@@ -81,24 +81,24 @@ public class CarroMB {
 		this.carros = carros;
 	}
 
-//	public String caminhoUpload(String imagem){
-//		return UploadImageUtil.getCaminhoRelativo(imagem);
-//	}
+	public String caminhoUpload(String imagem){
+		return UploadImageUtil.getCaminhoRelativo(imagem);
+	}
 	
 	public String salvar() {
-//		String nomeImagem;
-//		try {
-//			nomeImagem = UploadImageUtil.salvar(imagem, carro.getImagem());
-//			carro.setImagem(nomeImagem);
-//		} catch (UploadImageException e) {
-//			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(e.getMessage()));
-//			e.printStackTrace();
-//			return "";
-//		} catch (IOException e) {
-//			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Nao foi possivel salvar a imagem."));
-//			e.printStackTrace();
-//			return "";
-//		}
+		String nomeImagem;
+		try {
+			nomeImagem = UploadImageUtil.salvar(imagem, carro.getImagem());
+			carro.setImagem(nomeImagem);
+		} catch (UploadImageException e) {
+			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(e.getMessage()));
+			e.printStackTrace();
+			return "";
+		} catch (IOException e) {
+			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Nao foi possivel salvar a imagem."));
+			e.printStackTrace();
+			return "";
+		}
 		
 		carroDao.salvar(carro);
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Carro salvo com sucesso!"));
