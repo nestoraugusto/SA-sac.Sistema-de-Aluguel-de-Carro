@@ -3,6 +3,7 @@ package br.senai.sc.ti20132n1.sa.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 
 
@@ -21,8 +22,10 @@ public class Cliente {
 	private String dataNascimento;
 	private Double numeroHabilitacao;
 	private String endereco;
-	private String cidade;
-	private String estado;
+	@ManyToOne
+	private Cidade cidade;
+	@ManyToOne
+	private Estado estado;
 	
 	public long getId() {
 		return id;
@@ -78,16 +81,17 @@ public class Cliente {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public String getCidade() {
+	
+	public Cidade getCidade() {
 		return cidade;
 	}
-	public void setCidade(String cidade) {
+	public void setCidade(Cidade cidade) {
 		this.cidade = cidade;
 	}
-	public String getEstado() {
+	public Estado getEstado() {
 		return estado;
 	}
-	public void setEstado(String estado) {
+	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
 	public String getNomeusuario() {
