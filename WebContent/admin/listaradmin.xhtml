@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/padraoAdmin.xhtml">
+	<ui:define name="header">
+		<h3>
+			Listar<span class="rótulo rótulo-padrão">de Administrador</span>
+		</h3>
+	</ui:define>
+	<ui:define name="content">
+		<div class="col-md-3">
+				<ul class="nav nav-pills nav-stacked">
+					<li role="presentation" class="dropdown"><a
+						class="dropdown-toggle" data-toggle="dropdown" href="#"
+						role="button" aria-expanded="false"> Carro <span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu" role="menu">
+							<li role="presentation"><a role="menuitem" tabindex="-1"
+								href="cadastrocarro.xhtml">Cadastra</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1"
+								href="#">Busca</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1"
+								href="listarcarros.xhtml">Listar</a></li>
+						</ul>
+						</li>
+						<ul class="nav nav-pills nav-stacked">
+				<li role="presentation" class="dropdown"><a
+					class="dropdown-toggle" data-toggle="dropdown" href="#"
+					role="button" aria-expanded="false"> Cliente <span
+						class="caret"></span>
+				</a>
+					<ul class="dropdown-menu" role="menu">
+						<li role="presentation"><a role="menuitem" tabindex="-1"
+							href="cadastrocliente.xhtml">Cadastra</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1"
+							href="#">Busca</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1"
+							href="listarcliente.xhtml">Listar</a></li>
+					</ul>
+					</li>
+			</ul>
+				</ul>
+			</div>
+			<div class="col-md-9">
+				<h:form>
+					<h:dataTable styleClass="table" value="#{AdministradorMB.administradores}"
+						var="item">
+						<h:column>
+							<f:facet name="header">ID</f:facet>
+							<h:outputText value="#{item.id}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">Nome</f:facet>
+							<h:outputText value="#{item.nome}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">E-mail</f:facet>
+							<h:outputText value="#{item.email}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">Cargo</f:facet>
+							<h:outputText value="#{item.cargo}" />
+						</h:column>
+						
+						
+
+						<h:column>
+							<h:commandLink styleClass="btn btn-info"
+								action="#{AdministradorMB.editar(item.id)}">
+								<span class="glyphicon glyphicon-edit"></span>
+							</h:commandLink>
+							<h:outputText value="&nbsp;&nbsp;&nbsp;" />
+							<h:commandLink styleClass="btn btn-warning"
+								onclick="return confirm('Tem certeza?');"
+								action="#{AdministradorMB.excluir(item.id)}">
+								<span class="glyphicon glyphicon-trash"></span>
+							</h:commandLink>
+						</h:column>
+					</h:dataTable>
+				</h:form>
+			</div>  
+	</ui:define>
+	<ui:define name="footer">
+	    
+	</ui:define>
+</ui:composition>
+</html>
