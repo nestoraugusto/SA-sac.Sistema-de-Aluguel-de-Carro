@@ -23,11 +23,13 @@ public class CarroMB {
 	private List<Carro> carros;
 	private CarroDao carroDao;
 	private Part imagem;
+	private UploadImageUtil uploadImageUtil;
 
 	@PostConstruct
 	public void initMB() {
 		this.carro = new Carro();
 		carroDao = new CarroDao();
+		uploadImageUtil = new UploadImageUtil("img/uploads/");
 	}
 
 	
@@ -109,7 +111,7 @@ public class CarroMB {
 		Long id = Long.valueOf(idParam);
 		
 		Carro carroExcluir = carroDao.buscarPorId(id);
-//		UploadImageUtil.excluir(carroExcluir.getImagem());
+		UploadImageUtil.excluir(carroExcluir.getImagem());
 		
 		carroDao.excluir(id);
 		carros = null;

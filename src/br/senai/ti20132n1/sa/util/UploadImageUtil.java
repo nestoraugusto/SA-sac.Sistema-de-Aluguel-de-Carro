@@ -11,7 +11,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.Part;
 
 public class UploadImageUtil {
-	private static final String DIRETORIO_IMAGENS = "/resources/img/uploads/";
+	private static String DIRETORIO_IMAGENS;
 	private static final Map<String, String> TIPOS_PERMITIDOS = new HashMap<String, String>();
 	
 	static{
@@ -21,7 +21,11 @@ public class UploadImageUtil {
 		TIPOS_PERMITIDOS.put("image/pjpeg", "jpg");
 	}
 
-	public static String salvar(Part imagem, String imagemAntiga) throws UploadImageException, IOException {
+	public UploadImageUtil(String diretorio) {
+		DIRETORIO_IMAGENS = "/resources/".concat(diretorio);
+	}
+	
+	public static  String salvar(Part imagem, String imagemAntiga) throws UploadImageException, IOException {
 		if(imagem == null){
 			return imagemAntiga;
 		}
@@ -65,7 +69,7 @@ public class UploadImageUtil {
 		return novoNome.concat("." + TIPOS_PERMITIDOS.get(imagem.getContentType()));
 	}
 
-	public static String getCaminhoRelativo(String imagem) {
+	public static  String getCaminhoRelativo(String imagem) {
 		return DIRETORIO_IMAGENS.concat(imagem);
 	}
 
