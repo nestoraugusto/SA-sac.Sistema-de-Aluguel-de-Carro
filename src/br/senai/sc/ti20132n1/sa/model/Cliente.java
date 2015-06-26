@@ -26,7 +26,14 @@ public class Cliente {
 	private Cidade cidade;
 	@ManyToOne
 	private Estado estado;
+	private Usuario cliente;
 	
+	public Usuario getCliente() {
+		return cliente;
+	}
+	public void setCliente(Usuario cliente) {
+		this.cliente = cliente;
+	}
 	public long getId() {
 		return id;
 	}

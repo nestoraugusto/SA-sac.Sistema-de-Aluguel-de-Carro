@@ -17,7 +17,19 @@ public class Reserva {
 	private Date dataDeRetirada;
 	private Date dataDeDevolucao;
 	private double valortotal;
+	private Carro carros;
 	
+	
+	
+	
+	
+	
+	public Carro getCarros() {
+		return carros;
+	}
+	public void setCarros(Carro carros) {
+		this.carros = carros;
+	}
 	public long getId() {
 		return id;
 	}

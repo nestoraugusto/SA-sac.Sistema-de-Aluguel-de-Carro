@@ -78,7 +78,7 @@
 								<h:panelGroup>
 									<h:outputLabel value="CPF" />
 									<h:inputText styleClass="form-control"
-										value="#{dministradorMB.administrador.cpf}"  required="true" requiredMessage="Preenchimento obrigatório"/>
+										value="#{administradorMB.administrador.cpf}"  required="true" requiredMessage="Preenchimento obrigatório"/>
 								</h:panelGroup>
 							</div>
 						</div>
@@ -122,7 +122,7 @@
 							<h:panelGroup>
 								<h:outputLabel value="Estado" />
 								<h:selectOneMenu styleClass="form-control"
-									value="#{AdministradorMB.administrador.estado}">
+									value="#{administradorMB.administrador.estado}">
 									<f:selectItems itemValue="-------" />
 								</h:selectOneMenu> 
 							</h:panelGroup>
@@ -134,7 +134,7 @@
 							<h:panelGroup>
 								<h:outputLabel value="Cargo" />
 								<h:selectOneMenu styleClass="form-control"
-									value="#{AdministradorMB.administrador.cargo}">
+									value="#{administradorMB.administrador.cargo}">
 									<f:selectItem itemValue="Vendedor" />
 									<f:selectItem itemValue="Funcionario" />
 									<f:selectItem itemValue="Gerente" />
@@ -148,9 +148,9 @@
 					</div>
 					<div class="col-md-12">
 						<br></br>
+						<h:messages globalOnly="true" styleClass="alert-success " style="color: #0C7600;" />
 						<div class="btn-group" role="group" aria-label="...">
-
-							<h:commandButton action="#{AdministradorMB.salvar()}" value="Salvar"
+							<h:commandButton action="#{administradorMB.salvar()}" value="Salvar"
 								styleClass="btn btn-success" />
 							<button type="button" class="btn btn-default">Limpar</button>
 						</div>
