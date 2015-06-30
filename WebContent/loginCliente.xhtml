@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/padrao.xhtml">
+	<ui:define name="content">
+	<h:messages globalOnly="true" styleClass="alert alert-warnning" />
+		<center><h:form class="form-horizontal">
+			<h:outputLabel value="E-mail: " />
+			<h:inputText styleClass="form-control" value="#{sessaoMB.clienteForm.email}" />
+			<h:outputLabel value="Senha: " />
+			<h:inputText styleclass="form-control" value="#{sessaoMB.clienteForm.senha}" />
+			<br />
+			<h:commandButton action="#{sessaoMB.login()}" value="Logar" />			
+		</h:form></center>
+	</ui:define>
+	<ui:define name="footer">
+	    
+	</ui:define>
+</ui:composition>
+</html>

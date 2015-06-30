@@ -20,16 +20,8 @@ public class Administrador {
 	private String cidade;
 	private String estado;
 	private String cargo;
-	private Usuario administrador;
 	
 	
-	
-	public Usuario getAdministrador() {
-		return administrador;
-	}
-	public void setAdministrador(Usuario administrador) {
-		this.administrador = administrador;
-	}
 	public long getId() {
 		return id;
 	}
