@@ -70,7 +70,7 @@ public class ClienteMB {
 
 	public String salvar(){
 		clienteDao.salvar(cliente);
-		return "listacliente?faces-redirect=true";
+		return "loginCliente?faces-redirect=true";
 	}
 	
 	public String excluir(String idParam){

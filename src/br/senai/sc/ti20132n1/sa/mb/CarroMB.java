@@ -104,7 +104,7 @@ public class CarroMB {
 		
 		carroDao.salvar(carro);
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Carro salvo com sucesso!"));
-		return "listacarro";
+		return "listarcarros";
 	}
 
 	public String excluir(String idParam) {

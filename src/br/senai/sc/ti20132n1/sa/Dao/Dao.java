@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 
 import br.senai.ti20132n1.sa.util.JPAUtil;
 
-public class Dao {
+public abstract class Dao {
 
 	protected EntityManager getEntityManager() {
 		return JPAUtil.getEntityManager();

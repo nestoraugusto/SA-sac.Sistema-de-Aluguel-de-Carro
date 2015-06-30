@@ -21,6 +21,7 @@ public class Administrador {
 	private String estado;
 	private String cargo;
 	
+	
 	public long getId() {
 		return id;
 	}

@@ -27,6 +27,10 @@ public class ClienteDao extends Dao{
 	public Cliente buscarPorId(Long id) {
 		return getEntityManager().find(Cliente.class, id);
 	}
+	
+	public Cliente buscarPorEmail(String email){
+		return getEntityManager().find(Cliente.class, email);
+	}
 
 	
 

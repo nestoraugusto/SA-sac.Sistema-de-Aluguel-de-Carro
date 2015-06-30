@@ -1,5 +1,6 @@
 package br.senai.sc.ti20132n1.sa.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,10 +15,10 @@ public class Cliente {
 	@GeneratedValue
 	private long id;
 	private String nome;
-	private String nomeusuario;
 	private String senha;
 	private String cpf;
 	private String telefone;
+	@Column(unique = true)
 	private String email;
 	private String dataNascimento;
 	private Double numeroHabilitacao;
@@ -26,6 +27,8 @@ public class Cliente {
 	private Cidade cidade;
 	@ManyToOne
 	private Estado estado;
+	
+	
 	
 	public long getId() {
 		return id;
@@ -94,12 +97,7 @@ public class Cliente {
 	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
-	public String getNomeusuario() {
-		return nomeusuario;
-	}
-	public void setNomeusuario(String nomeusuario) {
-		this.nomeusuario = nomeusuario;
-	}
+	
 	@Override
 	public String toString(){
 		return "\nId: " + id + "\nNome: " + nome + "\nSenha: " + senha 
