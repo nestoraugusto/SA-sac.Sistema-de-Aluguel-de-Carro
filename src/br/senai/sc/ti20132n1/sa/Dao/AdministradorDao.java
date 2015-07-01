@@ -26,6 +26,9 @@ public class AdministradorDao extends Dao{
 		return getEntityManager().find(Administrador.class, id);
 	}
 	
+	public Administrador buscarPorEmail(String email){
+		return getEntityManager().find(Administrador.class, email);
+	}
 	
 	
 	@SuppressWarnings("unchecked")
