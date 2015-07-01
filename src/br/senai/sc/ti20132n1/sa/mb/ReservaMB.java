@@ -3,10 +3,11 @@ package br.senai.sc.ti20132n1.sa.mb;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
 
 import br.senai.sc.ti20132n1.sa.Dao.ReservaDao;
 import br.senai.sc.ti20132n1.sa.model.Reserva;
-
+@ManagedBean
 public class ReservaMB {
 	
 	private Reserva reserva;

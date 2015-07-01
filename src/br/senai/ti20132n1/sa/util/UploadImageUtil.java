@@ -10,6 +10,8 @@ import javax.faces.context.FacesContext;
 import javax.servlet.ServletContext;
 import javax.servlet.http.Part;
 
+
+
 public class UploadImageUtil {
 	private static String DIRETORIO_IMAGENS;
 	private static final Map<String, String> TIPOS_PERMITIDOS = new HashMap<String, String>();
