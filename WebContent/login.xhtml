@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/padrao.xhtml">
+	<ui:define name="header">
+
+		<h3>
+			Login<span class="rótulo rótulo-padrão"></span>
+		</h3>
+		<br />
+		<br />
+	</ui:define>
+	<ui:define name="content">
+		<div class="col-md-12">
+			<div class="col-md-6">
+				<h:messages globalOnly="true" styleClass="alert alert-warnning" />
+
+				<h:form>
+					<h3>Cliente</h3>
+					<br />
+					<h:outputLabel value="E-Mail" />
+					<h:inputText styleClass="form-control"
+						value="#{sessaoMB.clienteForm.email}" style="width: 376px;" />
+					<br />
+					<h:outputLabel value="Senha" />
+					<h:inputText styleClass="form-control"
+						value="#{sessaoMB.clienteForm.senha}" style="width: 376px;" />
+					<br />
+					<h:commandButton action="#{sessaoMB.login()}" value="Logar" />
+				</h:form>
+			</div>
+			<div class="col-md-6">
+				<h:messages globalOnly="true" styleClass="alert alert-warnning" />
+
+				<h:form>
+					<h3>Administrador</h3>
+					<br />
+					<h:outputLabel value="E-Mail" />
+					<h:inputText styleClass="form-control"
+						value="#{sessaoAdminMB.administradorForm.email}"
+						style="width: 376px;" />
+					<br />
+					<h:outputLabel value="Senha" />
+					<h:inputText styleClass="form-control"
+						value="#{sessaoAdminMB.administradorForm.senha}"
+						style="width: 376px;" />
+					<br />
+					<h:commandButton action="#{sessaoAdminMB.login()}" value="Logar" />
+				</h:form>
+			</div>
+		</div>
+	</ui:define>
+	<ui:define name="footer">
+	</ui:define>
+</ui:composition>
+</html>
