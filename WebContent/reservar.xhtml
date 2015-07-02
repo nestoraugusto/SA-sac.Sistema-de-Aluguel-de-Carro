@@ -8,58 +8,58 @@
 
 <ui:composition template="/WEB-INF/templates/padrao.xhtml">
 	<ui:define name="content">
-		<h:form>
-			<h:outputLabel value="Data de Retirada" />
-			<h:inputText styleClass="campodata" id="iddataDeRetirada"
-				converterMessage="Data inválida"
-				value="#{reservaMB.reserva.dataDeRetirada}">
-				<f:passThroughAttribute name="type" value="date" />
-				<f:convertDateTime pattern="MM/dd/yyyy" />
-			</h:inputText>
-			<br />
-			<h:outputLabel value="Local de Retirada" />
-			<h:selectOneMenu styleClass="form-control"
-				value="#{reservaMB.reserva.localDeretirada}">
-				<f:selectItem itemValue="__" />
-				<f:selectItem itemValue="__" />
-				<f:selectItem itemValue="__" />
-				<f:selectItem itemValue="__" />
-			</h:selectOneMenu>
-			<div class="row">
+		<div class="row">
 			<div class="col-md-12">
-				<div class="thumbnail">
+				<h:form>
+					<h:outputLabel value="Data de Retirada" />
+					<h:inputText styleClass="form-control" id="iddataDeRetirada"
+						style="width:400px;" converterMessage="Data inválida"
+						value="#{reservaMB.reserva.dataDeRetirada}">
+						<f:passThroughAttribute name="type" value="date" />
+						<f:convertDateTime pattern="MM/dd/yyyy" />
+					</h:inputText>
+					<br />
+					<h:outputLabel value="Local de Retirada" />
+					<h:selectOneMenu styleClass="form-control"
+						value="#{reservaMB.reserva.localDeretirada}" style="width:400px;">
+						<f:selectItem itemValue="__" />
+						<f:selectItem itemValue="__" />
+						<f:selectItem itemValue="__" />
+						<f:selectItem itemValue="__" />
+					</h:selectOneMenu>
+					<br />
 					<ui:repeat var="carro" value="#{carroMB.carros}">
-						<div class="caption">
 						<div class="col-md-6">
-							<h:graphicImage style="width:40%;"
+
+							<h:graphicImage style="width: 328px;"
 								url="#{carroMB.caminhoUpload(carro.imagem)}" />
-								</div>
-							<div class="col-md-3">
-								<h3>
-									Marca:
-									<h:outputText value="#{carro.marca}" />
-								</h3>
-								</div>
-								<div class="col-md-3">
-								<h3>
-									Modelo:
-									<h:outputText value="#{carro.model}" />
-								</h3>
-								
-							</div>
-							<a href="#" class="btn btn-primary" role="button">Button</a> <a
-										href="#" class="btn btn-default" role="button">Button</a>
 						</div>
+						<div class="col-md-6">
+							<div class="caract-grupo">
+								<ul>
+									<li>Marca: <h:outputText value="#{carro.marca}" />
+									</li>
+									<li>Modelo: <h:outputText value="#{carro.model}" />
+									</li>
+									<li>Portas: <h:outputText value="#{carro.quantportas}" />
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<a href="#" class="btn btn-primary" role="button">Button</a>
+						<a href="#" class="btn btn-default" role="button">Button</a>
 					</ui:repeat>
-				</div>
+
+					<div class="col-md-12">
+					<br></br>
+						<h:commandButton action="#{reservaMB.salvar()}"
+							styleClass="btn btn-succe" value="Enviar" />
+						<button class="btn btn-default" type="reset">Restaurar</button>
+					</div>
+				</h:form>
 			</div>
-			</div>
-			<div>
-				<h:commandButton action="#{reservaMB.salvar()}"
-					styleClass="btn btn-succe" value="Enviar" />
-				<button class="btn btn-default" type="reset">Restaurar</button>
-			</div>
-		</h:form>
+		</div>
 		<h:outputScript library="js" name="jquery.mask.min.js" />
 		<script>
 			$(function(){
