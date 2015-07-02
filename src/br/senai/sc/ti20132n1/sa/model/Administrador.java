@@ -16,12 +16,20 @@ public class Administrador {
 	private Date dataNascimento;
 	private String cpf;
 	private String email;
+	private String senha;
 	private String endereco;
 	private String cidade;
 	private String estado;
 	private String cargo;
 	
 	
+	
+	public String getSenha() {
+		return senha;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 	public long getId() {
 		return id;
 	}

@@ -13,8 +13,8 @@
 		</h3>
 	</ui:define>
 	<ui:define name="content">
-		<div class="col-md-3">
-			<ul class="nav nav-pills nav-stacked">
+		<!--	<div class="col-md-3">
+			   <ul class="nav nav-pills nav-stacked">
 				<li role="presentation" class="dropdown"><a
 					class="dropdown-toggle" data-toggle="dropdown" href="#"
 					role="button" aria-expanded="false"> Carro <span class="caret"></span>
@@ -42,19 +42,20 @@
 						<li role="presentation"><a role="menuitem" tabindex="-1"
 							href="listarcliente.xhtml">Listar</a></li>
 					</ul></li>
-			</ul>
-		</div>
+			</ul> 
+		</div> -->
 		<div class="col-md-9">
 			<div>
 				<h:form>
-
 					<div class="col-md-6">
 						<h:panelGroup rendered="#{not empty clienteMB.cliente.id}">
-							<h:outputLabel value="Id" />
+							<h:outputLabel value="ID" />
 							<h:inputText styleClass="form-control"
 								value="#{clienteMB.cliente.id}" readonly="true" />
+
 						</h:panelGroup>
 						<h:inputHidden value="#{clienteMB.cliente.id}" />
+
 						<br />
 						<div class="input-group">
 							<h:panelGroup>
@@ -67,8 +68,8 @@
 						<div class="input-group">
 							<h:panelGroup>
 								<h:outputLabel value="Senha" />
-								<h:inputText type="password" styleClass="form-control #campoSenha"
-									value="#{clienteMB.cliente.senha}" />
+								<h:inputSecret type="password" styleClass="form-control"
+									id="campoSenha" value="#{clienteMB.cliente.senha}" />
 							</h:panelGroup>
 						</div>
 						<br />
@@ -87,9 +88,11 @@
 									value="#{clienteMB.cliente.dataNascimento}" />
 							</h:panelGroup>
 						</div>
+
 					</div>
 					<br />
 					<div class="col-md-6" style="top: -20px;">
+
 						<div class="input-group">
 							<h:panelGroup>
 								<h:outputLabel value="Telefone" />
@@ -101,7 +104,7 @@
 						<div class="input-group">
 							<h:panelGroup>
 								<h:outputLabel value="E-mail" />
-								<h:inputText styleClass="form-control email"
+								<h:inputText styleClass="form-control"
 									value="#{clienteMB.cliente.email}" />
 							</h:panelGroup>
 						</div>
@@ -130,10 +133,10 @@
 								<h:outputLabel value="Cidade" />
 								<h:selectOneMenu styleClass="form-control"
 									value="#{clienteMB.cliente.cidade}">
-								<f:ajax event="change" >
-									
-								</f:ajax>	
-									
+									<f:ajax event="change">
+
+									</f:ajax>
+
 								</h:selectOneMenu>
 							</h:panelGroup>
 						</div>
@@ -145,6 +148,7 @@
 									value="#{clienteMB.cliente.numeroHabilitacao}" />
 							</h:panelGroup>
 						</div>
+
 					</div>
 
 					<div class="col-md-12">
@@ -160,18 +164,20 @@
 			</div>
 		</div>
 		<h:outputScript library="js" name="jquery.mask.min.js" />
-		
-		
-		
+
+
+
 		<script>
 			$(function(){
 				$('.cpf').mask('000.000.000-00', {clearIfNotMatch: true});
 				$('.phone').mask('(00)0000-0000');
 				$('.habilitacao').mask('000000000000');
 				$('.placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
-				$('.email').inputmask("{1,20}@{1,20}.{3}[.{2}]");
+				$('.email').mask("");
 				$(".campoSenha").mask("***-****");
-			})
+				
+			
+			});
 		</script>
 
 	</ui:define>
