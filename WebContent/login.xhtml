@@ -28,7 +28,7 @@
 						value="#{sessaoMB.clienteForm.email}" style="width: 376px;" />
 					<br />
 					<h:outputLabel value="Senha" />
-					<h:inputText styleClass="form-control"
+					<h:inputSecret styleClass="form-control"
 						value="#{sessaoMB.clienteForm.senha}" style="width: 376px;" />
 					<br />
 					<h:commandButton action="#{sessaoMB.login()}" value="Logar" />
@@ -46,7 +46,7 @@
 						style="width: 376px;" />
 					<br />
 					<h:outputLabel value="Senha" />
-					<h:inputText styleClass="form-control"
+					<h:inputSecret styleClass="form-control"
 						value="#{sessaoAdminMB.administradorForm.senha}"
 						style="width: 376px;" />
 					<br />
@@ -54,6 +54,8 @@
 				</h:form>
 			</div>
 		</div>
+		
+		
 	</ui:define>
 	<ui:define name="footer">
 	</ui:define>

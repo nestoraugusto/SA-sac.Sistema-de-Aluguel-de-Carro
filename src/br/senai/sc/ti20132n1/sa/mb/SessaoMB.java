@@ -37,7 +37,7 @@ public class SessaoMB {
 		
 		if(checkLogin(cliente)){
 			clienteLogado = cliente;
-			return "/admin/cadastrocarro?face-redirect=true";
+			return "/index?face-redirect=true";
 		}
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Email ou senha invalidos"));
 		return "/login";

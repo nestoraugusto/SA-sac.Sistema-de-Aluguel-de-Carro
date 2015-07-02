@@ -30,10 +30,10 @@ public class SessaoAdminMB {
 		Administrador administrador = dao.buscarPorEmail(administradorForm.getEmail());
 			if(checkLogin(administrador)){
 				administradorLogado = administrador;
-				return "/admin/index?faces-redirect=true";
+				return "/admin/indexAdmin?faces-redirect=true";
 			}
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Usuário ou senha inválido."));
-		return "/loginadmin";
+		return "/login";
 	}
 	
 	private boolean checkLogin(Administrador administradorEncontrado) {
