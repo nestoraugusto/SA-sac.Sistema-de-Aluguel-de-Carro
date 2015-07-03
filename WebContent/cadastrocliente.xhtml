@@ -120,24 +120,16 @@
 						<div class="input-group">
 							<h:panelGroup>
 								<h:outputLabel value="Estado" />
-								<h:selectOneMenu styleClass="form-control"
-									value="#{clienteMB.cliente.estado}">
-									<f:selectItems value="#{clienteMB.estado}" var="estado"
-										itemLabel="#{estado.uf}" itemValue="#{estado}" />
-								</h:selectOneMenu>
+								<h:inputText styleClass="form-control"
+									value="#{clienteMB.cliente.estado}" />
 							</h:panelGroup>
 						</div>
 						<br />
 						<div class="input-group">
 							<h:panelGroup>
 								<h:outputLabel value="Cidade" />
-								<h:selectOneMenu styleClass="form-control"
-									value="#{clienteMB.cliente.cidade}">
-									<f:ajax event="change">
-
-									</f:ajax>
-
-								</h:selectOneMenu>
+								<h:inputText styleClass="form-control"
+									value="#{clienteMB.cliente.cidade}" />
 							</h:panelGroup>
 						</div>
 						<br />

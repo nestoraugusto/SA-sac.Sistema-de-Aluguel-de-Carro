@@ -16,58 +16,60 @@
 
 			</ul>
 			
-				<h:panelGroup rendered="#{sessaoMB.logado}"  >
-					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown"><a href="#" class="dropdown-toggle"
-							data-toggle="dropdown" role="button" aria-expanded="false"> <span
-								class="glyphicon glyphicon-user"></span>Cliente <span
-								class="caret"></span>
-						</a>
-							<ul class="dropdown-menu" role="menu">
-								<li><h:link outcome="/reservar.xhtml" value="Fazer Reserva" /></li>
-								<li><h:link outcome="" value="Carros" /></li>
-								<li class="divider"></li>
-								<li><h:form>
-										<h:commandLink value="Sair" action="#{sessaoMB.logout()}" />
-									</h:form></li>
-							</ul></li>
-					</ul>
-				</h:panelGroup>
+<!-- 				<h:panelGroup rendered="#{sessaoMB.logado}"  > -->
+<!-- 					<ul class="nav navbar-nav navbar-right"> -->
+<!-- 						<li class="dropdown"><a href="#" class="dropdown-toggle" -->
+<!-- 							data-toggle="dropdown" role="button" aria-expanded="false"> <span -->
+<!-- 								class="glyphicon glyphicon-user"></span>Administrador <span -->
+<!-- 								class="caret"></span> -->
+<!-- 						</a> -->
+<!-- 							<ul class="dropdown-menu" role="menu"> -->
+<!-- 								<li><h:link outcome="/admin/cadastrocarro.xhtml" value="Cadastro Carro" /></li> -->
+<!-- 								<li><h:link outcome="/admin/listarcarros.xhtml" value="listarcarros" /></li> -->
+<!-- 								<li><h:link outcome="/admin/cadastroadmin.xhtml" value="Cadastro de Admin" /></li> -->
+<!-- 								<li><h:link outcome="/admin/listaradmin.xhtml" value="Listar Admin" /></li> -->
+<!-- 								<li class="divider"></li> -->
+<!-- 								<li><h:form> -->
+<!-- 										<h:commandLink value="Sair" action="#{sessaoMB.logout()}" /> -->
+<!-- 									</h:form></li> -->
+<!-- 							</ul></li> -->
+<!-- 					</ul> -->
+<!-- 				</h:panelGroup> -->
 
-				<h:panelGroup rendered="#{not sessaoMB.logado}">
-					<ul class="nav navbar-nav navbar-right">
-						<li><h:link outcome="/cadastrocliente" value="Cadastre-se" /></li>
-						<li><h:link outcome="/login" value="Login" /></li>
-					</ul>
-				</h:panelGroup>
+<!-- 				<h:panelGroup rendered="#{not sessaoMB.logado}"> -->
+<!-- 					<ul class="nav navbar-nav navbar-right"> -->
+<!-- 						<li><h:link outcome="/cadastrocliente" value="Cadastre-se" /></li> -->
+<!-- 						<li><h:link outcome="/login" value="Login" /></li> -->
+<!-- 					</ul> -->
+<!-- 				</h:panelGroup> -->
 				
-				<h:panelGroup rendered="#{sessaoAdminMB.administradorLogado}">
+<!-- 				<h:panelGroup rendered="#{sessaoAdminMB.administradorLogado}"> -->
 
-						<ul class="nav navbar-nav navbar-right">
-							<li class="dropdown"><a href="#" class="dropdown-toggle"
-								data-toggle="dropdown" role="button" aria-expanded="false"
-								style="margin-top: 15px;"> <span
-									class="glyphicon glyphicon-user"></span>Admin <span
-									class="caret"></span>
-							</a>
-								<ul class="dropdown-menu" role="menu">
-									<li><h:link outcome="/admin/cadastrocarro"
-											value="Cadastrar Carros" /></li>
-									<li><h:link outcome="/admin/listarcarros"
-											value="Listar Carros" /></li>
-									<li><h:link outcome="/admin/cadastrocliente"
-											value="Cadastrar Cliente" /></li>
-									<li><h:link outcome="/admin/cadastroadmin"
-											value="Cadastrar de ADM" /></li>
-									<li><h:link outcome="/admin/listaradmin"
-											value="Listar ADMs" /></li>
-									<li class="divider"></li>
-									<li><h:form>
-											<h:commandLink value="Sair" action="#{sessaoAdminMB.logout()}" />
-										</h:form></li>
-								</ul></li>
-						</ul>
-					</h:panelGroup>
+<!-- 						<ul class="nav navbar-nav navbar-right"> -->
+<!-- 							<li class="dropdown"><a href="#" class="dropdown-toggle" -->
+<!-- 								data-toggle="dropdown" role="button" aria-expanded="false" -->
+<!-- 								style="margin-top: 15px;"> <span -->
+<!-- 									class="glyphicon glyphicon-user"></span>Admin <span -->
+<!-- 									class="caret"></span> -->
+<!-- 							</a> -->
+<!-- 								<ul class="dropdown-menu" role="menu"> -->
+<!-- 									<li><h:link outcome="/admin/cadastrocarro" -->
+<!-- 											value="Cadastrar Carros" /></li> -->
+<!-- 									<li><h:link outcome="/admin/listarcarros" -->
+<!-- 											value="Listar Carros" /></li> -->
+<!-- 									<li><h:link outcome="/admin/cadastrocliente" -->
+<!-- 											value="Cadastrar Cliente" /></li> -->
+<!-- 									<li><h:link outcome="/admin/cadastroadmin" -->
+<!-- 											value="Cadastrar de ADM" /></li> -->
+<!-- 									<li><h:link outcome="/admin/listaradmin" -->
+<!-- 											value="Listar ADMs" /></li> -->
+<!-- 									<li class="divider"></li> -->
+<!-- 									<li><h:form> -->
+<!-- 											<h:commandLink value="Sair" action="#{sessaoAdminMB.logout()}" /> -->
+<!-- 										</h:form></li> -->
+<!-- 								</ul></li> -->
+<!-- 						</ul> -->
+<!-- 					</h:panelGroup> -->
 				
 				
 				

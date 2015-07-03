@@ -7,15 +7,15 @@
 			style="padding-right: 0px; padding-left: 0px;">
 			<h:outputScript library="js" name="menu.js" />
 			<div id="cssmenu">
-				<ul class="nav navbar-nav">
-					<li><a class="navbar-brand" href="#"> <h:graphicImage
-								style="height: 100%;" library="img" name="home.png" />
-					</a></li>
-					<li><h:link outcome="/admin/index" value="Home" /></li>
-					<li><h:link outcome="/admin/quemsomos" value="Quem Somos Nós" /></li>
-					<li><h:link outcome="/admin/contatos" value="Contatos" /></li>
-					<li><h:link outcome="/admin/localizacao" value="Localizacao" /></li>
-				</ul>
+				<!-- 				<ul class="nav navbar-nav"> -->
+				<!-- 					<li><a class="navbar-brand" href="#"> <h:graphicImage -->
+				<!-- 								style="height: 100%;" library="img" name="home.png" /> -->
+				<!-- 					</a></li> -->
+				<!-- 					<li><h:link outcome="/admin/index" value="Home" /></li> -->
+				<!-- 					<li><h:link outcome="/admin/quemsomos" value="Quem Somos Nós" /></li> -->
+				<!-- 					<li><h:link outcome="/admin/contatos" value="Contatos" /></li> -->
+				<!-- 					<li><h:link outcome="/admin/localizacao" value="Localizacao" /></li> -->
+				<!-- 				</ul> -->
 
 				<div class="container">
 					<!-- style="margin-top: 15px;"  -->
@@ -39,13 +39,22 @@
 											value="Cadastrar de ADM" /></li>
 									<li><h:link outcome="/admin/listaradmin"
 											value="Listar ADMs" /></li>
+									<li><h:link outcome="/admin/indexAdmin" value="Index" /></li>
 									<li class="divider"></li>
 									<li><h:form>
-											<h:commandLink value="Sair" action="#{sessaoAdminMB.logout()}" />
+											<h:commandLink value="Sair"
+												action="#{sessaoAdminMB.logout()}" />
 										</h:form></li>
 								</ul></li>
 						</ul>
 					</h:panelGroup>
+
+<!-- 					<h:panelGroup rendered="#{not sessaoAdminMB.logadoAdminlogado}"> -->
+<!-- 						<ul class="nav navbar-nav navbar-right"> -->
+<!-- 							<li><h:link outcome="/cadastrocliente" value="Cadastre-se" /></li> -->
+<!-- 							<li><h:link outcome="/login" value="Login" /></li> -->
+<!-- 						</ul> -->
+<!-- 					</h:panelGroup> -->
 				</div>
 			</div>
 

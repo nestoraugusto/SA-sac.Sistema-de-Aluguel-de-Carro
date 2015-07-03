@@ -23,10 +23,10 @@
 						<h:outputLabel value="Local de Retirada" />
 						<h:selectOneMenu styleClass="form-control"
 							value="#{reservaMB.reserva.localDeretirada}" style="width:400px;">
-							<f:selectItem itemValue="__" />
-							<f:selectItem itemValue="__" />
-							<f:selectItem itemValue="__" />
-							<f:selectItem itemValue="__" />
+							<f:selectItem itemValue="Aeroporto 1" />
+							<f:selectItem itemValue="Aeroporto 2" />
+							<f:selectItem itemValue="Aeroporto 3" />
+							<f:selectItem itemValue="Aeroporto 4" />
 						</h:selectOneMenu>
 					</div>
 					<br />
@@ -42,10 +42,10 @@
 						<h:outputLabel value="Local de Devolução" />
 						<h:selectOneMenu styleClass="form-control"
 							value="#{reservaMB.reserva.localDevolucao}" style="width:400px;">
-							<f:selectItem itemValue="__" />
-							<f:selectItem itemValue="__" />
-							<f:selectItem itemValue="__" />
-							<f:selectItem itemValue="__" />
+							<f:selectItem itemValue="Aeroporto 1" />
+							<f:selectItem itemValue="Aeroporto 2" />
+							<f:selectItem itemValue="Aeroporto 3" />
+							<f:selectItem itemValue="Aeroporto 4" />
 						</h:selectOneMenu>
 					</div>
 				</div>
@@ -62,9 +62,9 @@
 							</li>
 							<li>Modelo: <h:outputText   value="#{carro.model}" />
 							</li>
-							<li>Portas: <h:outputText  value="#{reservaMB.reserva.carro.quantportas}" />
+							<li>Portas: <h:outputText  value="#{carro.quantportas}" />
 							</li>
-							<li>Valor: <h:outputText  value="#{reservaMB.reserva.carro.valorcarro}" />
+							<li>Valor: <h:outputText  value="#{carro.valorcarro}" />
 							</li>
 						</ul>
 

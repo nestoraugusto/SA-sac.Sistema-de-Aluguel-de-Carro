@@ -2,6 +2,7 @@ package br.senai.sc.ti20132n1.sa.model;
 
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,6 +16,7 @@ public class Administrador {
 	private String nome;
 	private String dataNascimento;
 	private String cpf;
+	@Column(unique = true)
 	private String email;
 	private String senha;
 	private String endereco;
