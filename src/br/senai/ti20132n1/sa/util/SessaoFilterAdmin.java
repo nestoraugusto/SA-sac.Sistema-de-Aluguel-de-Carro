@@ -21,8 +21,7 @@ public class SessaoFilterAdmin implements Filter{
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain filterChain) throws IOException, ServletException {
 		HttpServletRequest servletRequest = (HttpServletRequest) request;
-		SessaoAdminMB sessaoAdminMB = (SessaoAdminMB) servletRequest.getSession()
-				.getAttribute("sessaoAdminMB");
+		SessaoAdminMB sessaoAdminMB = (SessaoAdminMB) servletRequest.getSession().getAttribute("sessaoAdminMB");
 
 		if (sessaoAdminMB == null || !sessaoAdminMB.isLogadoAdmin()) {
 			HttpServletResponse servletResponse = (HttpServletResponse) response;

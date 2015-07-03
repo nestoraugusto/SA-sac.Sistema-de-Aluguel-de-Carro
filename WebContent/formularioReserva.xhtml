@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/padrao.xhtml">
+	<ui:define name="header">
+	</ui:define>
+	<ui:define name="content">
+		<h:form>
+			<h:dataTable styleClass="table"
+				value="#{reservaMB.reservas}" var="item">
+				<h:column>
+					<f:facet name="header">ID</f:facet>
+					<h:outputText value="#{item.id}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Modelo</f:facet>
+					<h:outputText value="#{item.carro.model}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Marca</f:facet>
+					<h:outputText value="#{item.carro.marca}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Ano</f:facet>
+					<h:outputText value="#{item.carro.ano}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Local de Retirada</f:facet>
+					<h:outputText value="#{item.localDeretiradacarro}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Local de Devolução</f:facet>
+					<h:outputText value="#{item.localDevolucao}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Data da Retirada</f:facet>
+					<h:outputText value="#{item.dataDeRetiradacarro}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Data da Devolução</f:facet>
+					<h:outputText value="#{item.dataDeDevolucaocarro}" />
+				</h:column>
+			</h:dataTable>
+		</h:form>
+	</ui:define>
+	<ui:define name="footer">
+	</ui:define>
+</ui:composition>
+</html>

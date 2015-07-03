@@ -5,6 +5,8 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
 
 @Entity
 public class Reserva {
@@ -17,6 +19,18 @@ public class Reserva {
 	private Date dataDeRetirada;
 	private Date dataDeDevolucao;
 	private double valortotal;
+	@OneToOne
+	private Carro carro;
+	
+
+	
+	public Carro getCarro() {
+		return carro;
+	}
+
+	public void setCarro(Carro carro) {
+		this.carro = carro;
+	}
 
 	public Long getId() {
 		return id;

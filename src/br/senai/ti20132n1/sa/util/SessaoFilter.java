@@ -14,15 +14,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.senai.sc.ti20132n1.sa.mb.SessaoMB;
 
-@WebFilter(urlPatterns = "/admin/*")
+@WebFilter
 public class SessaoFilter implements Filter {
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain filterChain) throws IOException, ServletException {
 		HttpServletRequest servletRequest = (HttpServletRequest) request;
-		SessaoMB sessaoMB = (SessaoMB) servletRequest.getSession()
-				.getAttribute("sessaoMB");
+		SessaoMB sessaoMB = (SessaoMB) servletRequest.getSession().getAttribute("sessaoMB");
 
 		if (sessaoMB == null || !sessaoMB.isLogado()) {
 			HttpServletResponse servletResponse = (HttpServletResponse) response;

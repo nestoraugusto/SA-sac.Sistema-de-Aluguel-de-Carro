@@ -58,17 +58,19 @@
 						<br />
 						<div class="input-group">
 							<h:panelGroup>
-								<h:outputLabel value="Nome" style="width: 382px;"/>
+								<h:outputLabel value="Nome" style="width: 382px;" />
 								<h:inputText styleClass="form-control"
-									value="#{administradorMB.administrador.nome}"  required="true" requiredMessage="Preenchimento obrigatório"/>
+									value="#{administradorMB.administrador.nome}" required="true"
+									requiredMessage="Preenchimento obrigatório" />
 							</h:panelGroup>
 						</div>
 						<div>
 							<div class="input-group">
 								<h:panelGroup>
 									<h:outputLabel value="Data de Nascimento" />
-									<h:inputText styleClass="form-control"
-										value="#{administradorMB.administrador.nome}"  required="true" requiredMessage="Preenchimento obrigatório"/>
+									<h:inputText styleClass="form-control  placeholder"
+										value="#{administradorMB.administrador.dataNascimento}" required="true"
+										requiredMessage="Preenchimento obrigatório" />
 								</h:panelGroup>
 							</div>
 						</div>
@@ -77,8 +79,9 @@
 							<div class="input-group">
 								<h:panelGroup>
 									<h:outputLabel value="CPF" />
-									<h:inputText styleClass="form-control"
-										value="#{administradorMB.administrador.cpf}"  required="true" requiredMessage="Preenchimento obrigatório"/>
+									<h:inputText styleClass="form-control cpf"
+										value="#{administradorMB.administrador.cpf}" required="true"
+										requiredMessage="Preenchimento obrigatório" />
 								</h:panelGroup>
 							</div>
 						</div>
@@ -86,80 +89,112 @@
 						<div>
 							<div class="input-group">
 								<h:panelGroup>
-									<h:outputLabel value="E-mail" style="width: 382px;"/>
+									<h:outputLabel value="E-mail" style="width: 382px;" />
 									<h:inputText styleClass="form-control"
-										value="#{administradorMB.administrador.email}"  required="true" requiredMessage="Preenchimento obrigatório"/>
+										value="#{administradorMB.administrador.email}" required="true"
+										requiredMessage="Preenchimento obrigatório" />
 								</h:panelGroup>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-6">
 
-					<div>
-						<div class="input-group">
-							<h:panelGroup>
-								<h:outputLabel value="Endereço" style="width: 382px;"/>
-								<h:inputText styleClass="form-control"
-									value="#{administradorMB.administrador.endereco}"  required="true" requiredMessage="Preenchimento obrigatório"/>
-							</h:panelGroup>
+						<div>
+							<div class="input-group">
+								<h:panelGroup>
+									<h:outputLabel value="Endereço" style="width: 382px;" />
+									<h:inputText styleClass="form-control"
+										value="#{administradorMB.administrador.endereco}"
+										required="true" requiredMessage="Preenchimento obrigatório" />
+								</h:panelGroup>
+							</div>
 						</div>
-					</div>
-					<br/>
-					<div>
-						<div class="input-group">
-							<h:panelGroup>
-								<h:outputLabel value="Cidade" />
-								<h:selectOneMenu styleClass="form-control"
-									value="#{administradorMB.administrador.cidade}">
-									<f:selectItems itemValue="-------" />
-								</h:selectOneMenu> 
-							</h:panelGroup>
+						<br />
+						<div>
+							<div class="input-group">
+								<h:panelGroup>
+									<h:outputLabel value="Cidade" />
+									<h:selectOneMenu styleClass="form-control"
+										value="#{administradorMB.administrador.cidade}">
+										<f:selectItems itemValue="-------" />
+									</h:selectOneMenu>
+								</h:panelGroup>
+							</div>
 						</div>
-					</div>
-					<br />
-					<div>
-						<div class="input-group">
-							<h:panelGroup>
-								<h:outputLabel value="Estado" />
-								<h:selectOneMenu styleClass="form-control"
-									value="#{administradorMB.administrador.estado}">
-									<f:selectItems itemValue="-------" />
-								</h:selectOneMenu> 
-							</h:panelGroup>
+						<br />
+						<div>
+							<div class="input-group">
+								<h:panelGroup>
+									<h:outputLabel value="Estado" />
+									<h:selectOneMenu styleClass="form-control"
+										value="#{administradorMB.administrador.estado}">
+										<f:selectItems itemValue="-------" />
+									</h:selectOneMenu>
+								</h:panelGroup>
+							</div>
 						</div>
-					</div>
-					<br />
-					<div>
-						<div class="input-group">
-							<h:panelGroup>
-								<h:outputLabel value="Cargo" />
-								<h:selectOneMenu styleClass="form-control"
-									value="#{administradorMB.administrador.cargo}">
-									<f:selectItem itemValue="Vendedor" />
-									<f:selectItem itemValue="Funcionario" />
-									<f:selectItem itemValue="Gerente" />
-									
-								</h:selectOneMenu> 
-							</h:panelGroup>
+						<br />
+						<div>
+							<div class="input-group">
+								<h:panelGroup>
+									<h:outputLabel value="Cargo" />
+									<h:selectOneMenu styleClass="form-control"
+										value="#{administradorMB.administrador.cargo}">
+										<f:selectItem itemValue="Vendedor" />
+										<f:selectItem itemValue="Funcionario" />
+										<f:selectItem itemValue="Gerente" />
+
+									</h:selectOneMenu>
+								</h:panelGroup>
+							</div>
+							<br/>
+							<div>
+							<div class="input-group">
+								<h:panelGroup>
+									<h:outputLabel value="Senha" style="width: 382px;" />
+									<h:inputHidden  styleClass="form-control"
+										value="#{administradorMB.administrador.senha}"
+										required="true" requiredMessage="Preenchimento obrigatório" />
+								</h:panelGroup>
+							</div>
 						</div>
-					</div>
-					
+							
+													
+						</div>
+
 
 					</div>
 					<div class="col-md-12">
 						<br></br>
-						<h:messages globalOnly="true" styleClass="alert-success " style="color: #0C7600;" />
+						<h:messages globalOnly="true" styleClass="alert-success "
+							style="color: #0C7600;" />
 						<div class="btn-group" role="group" aria-label="...">
-							<h:commandButton action="#{administradorMB.salvar()}" value="Salvar"
-								styleClass="btn btn-success" />
+							<h:commandButton action="#{administradorMB.salvar()}"
+								value="Salvar" styleClass="btn btn-success" />
 							<button type="button" class="btn btn-default">Limpar</button>
 						</div>
 					</div>
 				</h:form>
-				
+
 			</div>
 		</div>
-		
+
+		<h:outputScript library="js" name="jquery.mask.min.js" />
+
+
+
+		<script>
+			$(function(){
+				$('.cpf').mask('000.000.000-00', {clearIfNotMatch: true});
+				$('.phone').mask('(00)0000-0000');
+				$('.habilitacao').mask('000000000000');
+				$('.placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
+				$('.email').mask("");
+				$(".campoSenha").mask("***-****");
+				
+			
+			});
+		</script>
 	</ui:define>
 	<ui:define name="footer">
 

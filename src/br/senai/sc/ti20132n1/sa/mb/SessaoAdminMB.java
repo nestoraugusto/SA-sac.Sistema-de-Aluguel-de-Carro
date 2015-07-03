@@ -25,22 +25,24 @@ public class SessaoAdminMB {
 		return administradorLogado != null;
 	}
 	
+	private boolean checkLogin(Administrador administradorEncontrado) {
+		return administradorEncontrado != null 
+				&& administradorForm.getEmail().equalsIgnoreCase(administradorEncontrado.getEmail()) 
+				&& administradorForm.getSenha().equals(administradorEncontrado.getSenha());
+	}
+	
 	public String login(){
 		AdministradorDao dao = new AdministradorDao();
 		Administrador administrador = dao.buscaPorEmail(administradorForm.getEmail());
 			if(checkLogin(administrador)){
 				administradorLogado = administrador;
-				return "/index?faces-redirect=true";
+				return "/admin/index?faces-redirect=true";
 			}
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Usuário ou senha inválido."));
 		return "/login";
 	}
 	
-	private boolean checkLogin(Administrador administradorEncontrado) {
-		return administradorEncontrado != null 
-				&& administradorForm.getEmail().equals(administradorEncontrado.getEmail()) 
-				&& administradorForm.getSenha().equals(administradorEncontrado.getSenha());
-	}
+	
 	
 	public String logout(){
 		administradorLogado = null;
@@ -51,8 +53,8 @@ public class SessaoAdminMB {
 		return administradorForm;
 	}
 
-	public void setAdministradorForm(Administrador administradorLogar) {
-		this.administradorForm = administradorLogar;
+	public void setAdministradorForm(Administrador administradorForm) {
+		this.administradorForm = administradorForm;
 	}
 
 	public Administrador getAdministradorLogado() {
