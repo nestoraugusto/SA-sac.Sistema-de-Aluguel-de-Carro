@@ -33,7 +33,7 @@ public class SessaoMB {
 	
 	public String login(){
 		ClienteDao dao = new ClienteDao();
-		Cliente cliente = dao.buscarPorEmail(clienteForm.getEmail());
+		Cliente cliente = dao.buscaPorEmail(clienteForm.getEmail());
 		
 		if(checkLogin(cliente)){
 			clienteLogado = cliente;
@@ -41,6 +41,11 @@ public class SessaoMB {
 		}
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Email ou senha invalidos"));
 		return "/login";
+	}
+	
+	public String logout(){
+		clienteLogado = null;
+		return "/login?face-redirect=true";
 	}
 	
 	public Cliente getClienteForm(){
@@ -51,6 +56,13 @@ public class SessaoMB {
 		this.clienteForm = clienteForm;
 	}
 	
+	public Cliente getClienteLogado() {
+		return clienteLogado;
+	}
+
+	public void setClienteLogado(Cliente clienteLogado) {
+		this.clienteLogado = clienteLogado;
+	}
 	
 	
 

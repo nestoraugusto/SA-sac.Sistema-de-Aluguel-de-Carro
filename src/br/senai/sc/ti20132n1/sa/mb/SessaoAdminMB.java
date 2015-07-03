@@ -27,10 +27,10 @@ public class SessaoAdminMB {
 	
 	public String login(){
 		AdministradorDao dao = new AdministradorDao();
-		Administrador administrador = dao.buscarPorEmail(administradorForm.getEmail());
+		Administrador administrador = dao.buscaPorEmail(administradorForm.getEmail());
 			if(checkLogin(administrador)){
 				administradorLogado = administrador;
-				return "/admin/indexAdmin?faces-redirect=true";
+				return "/index?faces-redirect=true";
 			}
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Usuário ou senha inválido."));
 		return "/login";
@@ -44,7 +44,7 @@ public class SessaoAdminMB {
 	
 	public String logout(){
 		administradorLogado = null;
-		return "/loginadmin?face-redirect=true";
+		return "/login?face-redirect=true";
 	}
 
 	public Administrador getAdministradorForm() {

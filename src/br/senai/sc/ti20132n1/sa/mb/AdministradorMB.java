@@ -79,7 +79,7 @@ public class AdministradorMB {
 	public String salvar() {
 		administradorDao.salvar(administrador);
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Administrador salvo com sucesso!"));
-		return "listaradmin?faces-redirect=true";
+		return "/listaradmin?faces-redirect=true";
 	}
 
 	public String excluir(String idParam) {

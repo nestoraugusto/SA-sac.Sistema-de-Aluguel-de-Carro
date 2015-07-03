@@ -11,18 +11,18 @@ public class Reserva {
 
 	@Id
 	@GeneratedValue
-	private long id;
+	private Long id;
 	private String localDeretirada;
 	private String localDevolucao;
 	private Date dataDeRetirada;
 	private Date dataDeDevolucao;
 	private double valortotal;
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
