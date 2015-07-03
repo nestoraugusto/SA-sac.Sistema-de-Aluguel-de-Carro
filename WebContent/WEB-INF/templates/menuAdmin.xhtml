@@ -11,10 +11,10 @@
 					<li><a class="navbar-brand" href="#"> <h:graphicImage
 								style="height: 100%;" library="img" name="home.png" />
 					</a></li>
-					<li><h:link outcome="/index" value="Home" /></li>
-					<li><h:link outcome="/quemsomos" value="Quem Somos Nós" /></li>
-					<li><h:link outcome="/contatos" value="Contatos" /></li>
-					<li><h:link outcome="/localizacao" value="Localizacao" /></li>
+					<li><h:link outcome="/admin/index" value="Home" /></li>
+					<li><h:link outcome="/admin/quemsomos" value="Quem Somos Nós" /></li>
+					<li><h:link outcome="/admin/contatos" value="Contatos" /></li>
+					<li><h:link outcome="/admin/localizacao" value="Localizacao" /></li>
 				</ul>
 
 				<div class="container">
@@ -41,7 +41,7 @@
 											value="Listar ADMs" /></li>
 									<li class="divider"></li>
 									<li><h:form>
-											<h:commandLink value="Sair" action="#{sessaoAdminMB.logout()()}" />
+											<h:commandLink value="Sair" action="#{sessaoAdminMB.logout()}" />
 										</h:form></li>
 								</ul></li>
 						</ul>

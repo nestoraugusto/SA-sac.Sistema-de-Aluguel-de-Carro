@@ -1,6 +1,6 @@
 package br.senai.sc.ti20132n1.sa.model;
 
-import java.util.Date;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +13,7 @@ public class Administrador {
 	@GeneratedValue
 	private Long id;
 	private String nome;
-	private Date dataNascimento;
+	private String dataNascimento;
 	private String cpf;
 	private String email;
 	private String senha;
@@ -42,10 +42,10 @@ public class Administrador {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Date getDataNascimento() {
+	public String getDataNascimento() {
 		return dataNascimento;
 	}
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	public String getCpf() {
