@@ -27,9 +27,17 @@ public class Cliente {
 	private Cidade cidade;
 	@ManyToOne
 	private Estado estado;
+	@ManyToOne
+	private Reserva reserva;
 	
 	
 	
+	public Reserva getReserva() {
+		return reserva;
+	}
+	public void setReserva(Reserva reserva) {
+		this.reserva = reserva;
+	}
 	public long getId() {
 		return id;
 	}
