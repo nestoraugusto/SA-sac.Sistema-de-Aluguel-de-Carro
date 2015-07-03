@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.persistence.Query;
 
-import br.senai.sc.ti20132n1.sa.model.Carro;
 import br.senai.sc.ti20132n1.sa.model.Contato;
 
 public class ContatoDao extends Dao{
