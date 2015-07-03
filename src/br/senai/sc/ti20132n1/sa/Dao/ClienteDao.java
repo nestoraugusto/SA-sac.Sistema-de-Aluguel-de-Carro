@@ -27,11 +27,12 @@ public class ClienteDao extends Dao{
 	public Cliente buscarPorId(Long id) {
 		return getEntityManager().find(Cliente.class, id);
 	}
-	
-	public Cliente buscarPorEmail(String email){
-		return getEntityManager().find(Cliente.class, email);
+		
+	public Cliente buscaPorEmail(String email) {
+		Query query = getEntityManager().createQuery("From Cliente u Where u.email = :email", Cliente.class);
+		query.setParameter("email", email);
+		return (Cliente) query.getSingleResult();
 	}
-
 	
 
 	@SuppressWarnings("unchecked")

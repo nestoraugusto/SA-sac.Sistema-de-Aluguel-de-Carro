@@ -10,15 +10,15 @@ public class Estado {
 	
 	@Id
 	@GeneratedValue
-	private long id;
+	private Long id;
 	private String uf;
 	private String nome;
 	
 	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getUf() {
