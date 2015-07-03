@@ -7,7 +7,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core">
 
-<ui:composition template="/WEB-INF/templates/padraoAdmin.xhtml">
+<ui:composition template="/WEB-INF/templates/padrao.xhtml">
 	<ui:define name="header">
 		<h3>
 			Cadastro<span class="rótulo rótulo-padrão">de Carro</span>
@@ -52,6 +52,9 @@
 		<div class="col-md-9">
 			<div>
 
+		
+
+
 				<h:form enctype="multipart/form-data">
 					<div class="col-md-6">
 						<fieldset>
@@ -62,6 +65,7 @@
 							</h:panelGroup>
 							<h:inputHidden value="#{carroMB.carro.id}" />
 							<br />
+							
 							<div class="input-group" style="width: 382px;">
 								<h:outputLabel value="Marca " />
 								<h:inputText styleClass="form-control"
@@ -78,21 +82,21 @@
 							<br />
 							<div class="input-group" style="width: 382px;">
 								<h:outputLabel value="Ano " />
-								<h:inputText styleClass="form-control"
+								<h:inputText styleClass="form-control ano"
 									value="#{carroMB.carro.ano}" required="true"
 									requiredMessage="Preenchimento obrigatório" />
 							</div>
 							<br />
 							<div class="input-group" style="width: 382px;">
 								<h:outputLabel value="Valor " />
-								<h:inputText styleClass="form-control"
+								<h:inputText styleClass="form-control dinheiro"
 									value="#{carroMB.carro.valorcarro}" required="true"
 									requiredMessage="Preenchimento obrigatório" />
 							</div>
 							<br />
 							<div class="input-group" style="width: 382px;">
 								<h:outputLabel value="Placa " />
-								<h:inputText styleClass="form-control"
+								<h:inputText styleClass="form-control placa"
 									value="#{carroMB.carro.placa}" required="true"
 									requiredMessage="Preenchimento obrigatório" />
 							</div>
@@ -174,6 +178,24 @@
 
 			</div>
 		</div>
+
+	<h:outputScript library="js" name="jquery.mask.min.js" />
+
+
+
+		<script>
+			$(function(){
+				$('.ano').mask('0000', {clearIfNotMatch: true});
+				$('.placa').mask('AAAA-000');
+				$('.dinheiro').mask('000.000.000.000.000,00', {reverse: true});
+				$('.placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
+				$('.email').mask("");
+				$(".campoSenha").mask("***-****");
+				
+			
+			});
+		</script>
+	
 
 	</ui:define>
 	<ui:define name="footer">

@@ -8,58 +8,79 @@
 
 <ui:composition template="/WEB-INF/templates/padrao.xhtml">
 	<ui:define name="content">
-		<h:form>
-			<h:outputLabel value="Data de Retirada" />
-			<h:inputText styleClass="campodata" id="iddataDeRetirada"
-				converterMessage="Data inválida"
-				value="#{reservaMB.reserva.dataDeRetirada}">
-				<f:passThroughAttribute name="type" value="date" />
-				<f:convertDateTime pattern="MM/dd/yyyy" />
-			</h:inputText>
-			<br />
-			<h:outputLabel value="Local de Retirada" />
-			<h:selectOneMenu styleClass="form-control"
-				value="#{reservaMB.reserva.localDeretirada}">
-				<f:selectItem itemValue="__" />
-				<f:selectItem itemValue="__" />
-				<f:selectItem itemValue="__" />
-				<f:selectItem itemValue="__" />
-			</h:selectOneMenu>
-			<div class="row">
-			<div class="col-md-12">
-				<div class="thumbnail">
-					<ui:repeat var="carro" value="#{carroMB.carros}">
-						<div class="caption">
-						<div class="col-md-6">
-							<h:graphicImage style="width:40%;"
-								url="#{carroMB.caminhoUpload(carro.imagem)}" />
-								</div>
-							<div class="col-md-3">
-								<h3>
-									Marca:
-									<h:outputText value="#{carro.marca}" />
-								</h3>
-								</div>
-								<div class="col-md-3">
-								<h3>
-									Modelo:
-									<h:outputText value="#{carro.model}" />
-								</h3>
-								
-							</div>
-							<a href="#" class="btn btn-primary" role="button">Button</a> <a
-										href="#" class="btn btn-default" role="button">Button</a>
-						</div>
-					</ui:repeat>
+		<div>
+			<h:form>
+				<div class="col-md-6">
+					<div class="col-md-4">
+						<h:outputLabel value="Data de Retirada" />
+						<h:inputText styleClass="form-control" id="iddataDeRetirada"
+							style="width:400px;" converterMessage="Data inválida"
+							value="#{reservaMB.reserva.dataDeRetirada}">
+							<f:passThroughAttribute name="type" value="date" />
+							<f:convertDateTime pattern="MM/dd/yyyy" />
+						</h:inputText>
+						<br />
+						<h:outputLabel value="Local de Retirada" />
+						<h:selectOneMenu styleClass="form-control"
+							value="#{reservaMB.reserva.localDeretirada}" style="width:400px;">
+							<f:selectItem itemValue="__" />
+							<f:selectItem itemValue="__" />
+							<f:selectItem itemValue="__" />
+							<f:selectItem itemValue="__" />
+						</h:selectOneMenu>
+					</div>
+					<br />
+					<div class="col-md-4" style="left: 402px; top: -30px;">
+						<h:outputLabel value="Data de Devolução" />
+						<h:inputText styleClass="form-control" id="iddatadedovolucao"
+							style="width:400px;" converterMessage="Data inválida"
+							value="#{reservaMB.reserva.dataDeDevolucao}">
+							<f:passThroughAttribute name="type" value="date" />
+							<f:convertDateTime pattern="MM/dd/yyyy" />
+						</h:inputText>
+						<br />
+						<h:outputLabel value="Local de Devolução" />
+						<h:selectOneMenu styleClass="form-control"
+							value="#{reservaMB.reserva.localDevolucao}" style="width:400px;">
+							<f:selectItem itemValue="__" />
+							<f:selectItem itemValue="__" />
+							<f:selectItem itemValue="__" />
+							<f:selectItem itemValue="__" />
+						</h:selectOneMenu>
+					</div>
 				</div>
-			</div>
-			</div>
-			<div>
-				<h:commandButton action="#{reservaMB.salvar()}"
-					styleClass="btn btn-succe" value="Enviar" />
-				<button class="btn btn-default" type="reset">Restaurar</button>
-			</div>
-		</h:form>
+				<ui:repeat var="carro" value="#{carroMB.carros}">
+					<div class="col-md-6" style="top: 193px; right: 555px;">
+
+						<h:graphicImage style="width: 328px;"
+							url="#{carroMB.caminhoUpload(carro.imagem)}" />
+					</div>
+					<div class="col-md-6" style="right: 200px; top: 193px;">
+
+						<ul>
+							<li>Marca: <h:outputText value="#{carro.marca}" />
+							</li>
+							<li>Modelo: <h:outputText value="#{carro.model}" />
+							</li>
+							<li>Portas: <h:outputText value="#{carro.quantportas}" />
+							</li>
+						</ul>
+
+
+
+						<a href="#" class="btn btn-primary" role="button">Button</a> <a
+							href="#" class="btn btn-default" role="button">Button</a>
+					</div>
+				</ui:repeat>
+				<div class="col-md-12" style="top: 200px;">
+					<br></br>
+					<h:commandButton action="#{reservaMB.salvar()}"
+						styleClass="btn btn-succe" value="Enviar" />
+					<button class="btn btn-default" type="reset">Restaurar</button>
+				</div>
+			</h:form>
+		</div>
+
 		<h:outputScript library="js" name="jquery.mask.min.js" />
 		<script>
 			$(function(){

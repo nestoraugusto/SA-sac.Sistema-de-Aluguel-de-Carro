@@ -5,24 +5,38 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
 
 @Entity
 public class Reserva {
 
 	@Id
 	@GeneratedValue
-	private long id;
+	private Long id;
 	private String localDeretirada;
 	private String localDevolucao;
 	private Date dataDeRetirada;
 	private Date dataDeDevolucao;
 	private double valortotal;
+	@OneToOne
+	private Carro carro;
+	
 
-	public long getId() {
+	
+	public Carro getCarro() {
+		return carro;
+	}
+
+	public void setCarro(Carro carro) {
+		this.carro = carro;
+	}
+
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

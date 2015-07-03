@@ -4,7 +4,9 @@ import java.util.List;
 
 import javax.persistence.Query;
 
+
 import br.senai.sc.ti20132n1.sa.model.Administrador;
+import br.senai.sc.ti20132n1.sa.model.Cliente;
 
 
 public class AdministradorDao extends Dao{
@@ -24,8 +26,10 @@ public class AdministradorDao extends Dao{
 		return getEntityManager().find(Administrador.class, id);
 	}
 	
-	public Administrador buscarPorEmail(String email){
-		return getEntityManager().find(Administrador.class, email);
+	public Administrador buscaPorEmail(String email) {
+		Query query = getEntityManager().createQuery("From Administrador u Where u.email = :email", Administrador.class);
+		query.setParameter("email", email);
+		return (Administrador) query.getSingleResult();
 	}
 	
 	
